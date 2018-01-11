@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="shortcut icon" href="./images/favicon.ico"/>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet/less" href="./less/address.less"/>
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <a href="./user.html" class="fa fa-arrow-left"></a>
+    <p>收货地址管理</p>
+</header>
+<main id="main">
+    <a href="./addressManage.html">添加收货地址</a>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell mui-transitioning mui-selected">
+            <div class="mui-slider-right mui-disabled mui-selected">
+                <a class="mui-btn mui-btn-red" style="transform: translate(0px, 0px);">删除</a>
+            </div>
+            <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+                邮编：<i>111112</i>
+                收货人:<span>同大</span>
+                <p class="mui-ellipsis">avbasdf fdasd</p>
+            </div>
+        </li>
+    </ul>
+</main>
+<footer id="footer">
+    <div class="mui-row">
+        <a href="./index.html" class="mui-col-xs-3 fa fa-home">
+            <p>首页</p>
+        </a>
+        <a href="./category.html" class="mui-col-xs-3 fa fa-bars">
+            <p>分类</p>
+        </a>
+        <a href="./cart.html" class="mui-col-xs-3 fa fa-shopping-cart">
+            <p>购物车</p>
+        </a>
+        <a href="./user.html" class="mui-col-xs-3 fa fa-user active">
+            <p>会员中心</p>
+        </a>
+    </div>
+</footer>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/address.js"></script>
+<script type="text/html" id="queryaddress">
+    {{each rows as value i}}
+    <li class="mui-table-view-cell mui-transitioning mui-selected" data-id="{{value.id}}" >
+        <div class="mui-slider-right mui-disabled mui-selected">
+            <a class="mui-btn mui-btn-red" style="transform: translate(0px, 0px);" data-id="{{value.id}}">删除</a>
+        </div>
+        <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+            邮编：<i>{{value.postCode}}</i>
+            收货人:<span>{{value.recipients}}</span>
+            <p class="mui-ellipsis">{{value.address}} {{value.addressDetail}}</p>
+        </div>
+    </li>
+
+    {{/each}}
+</script>
+</body>
+</html>

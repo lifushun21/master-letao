@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>我的移动网站</title>
+    <link rel="shortcut icon" href="./images/favicon.ico"/>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet/less" href="./less/cart.less"/>
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <a href="searchList.html" class="fa fa-arrow-left"></a>
+    <div class="head-word">商品详情</div>
+    <a href="" class="fa fa-refresh"></a>
+</header>
+
+<main id="main">
+    <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--数据列表-->
+            <ul class="mui-table-view mui-table-view-chevron">
+                <li class="mui-table-view-cell mui-transitioning">
+                    <div class="mui-slider-right mui-disabled">
+
+                        <a class="mui-btn mui-btn-blue btn-delete" style="transform: translate(-90px, 0px);">删除</a>
+                        <a class="mui-btn mui-btn-red" style="transform: translate(-180px, 0px);">编缉</a>
+                    </div>
+                    <div class="mui-slider-handle mui-navigate-right" style="transform: translate(0px, 0px);">
+                        <div class="mui-table-cell">
+                            <a href="javascript:;" class="">
+                                <img class="mui-media-object mui-pull-left" src="./images/product.jpg">
+                                <div class="mui-media-body">
+                                    <h3>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</h3>
+                                    <!--<p class="mui-ellipsis">-->
+                                    <div class="box mui-clearfix">
+                                        <div class="price">
+                                            <i>￥499.1</i> <del>￥888.1</del>
+                                        </div>
+                                        <div class="num">x<i>1</i>双</div>
+                                    </div>
+
+                                    <div class="size">鞋码: <i>41</i></div>
+                                    <input type="checkbox"/>
+                                    <!--</p>-->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</main>
+<button id="confirmBtn" type="button" class="mui-btn mui-btn-blue mui-btn-outlined">确认消息框</button>
+<button id="toastBtn" type="button" class="mui-btn mui-btn-blue mui-btn-outlined">自动消失提示框</button>
+<div class="cart-order">
+    <div class="left">
+        订单总额：￥<i>0.00</i>
+    </div>
+    <a href="#" class="right">生成定单</a>
+</div>
+<footer id="footer">
+    <div class="mui-row">
+        <a href="./index.html" class="mui-col-xs-3 fa fa-home">
+            <p>首页</p>
+        </a>
+        <a href="category.html" class="mui-col-xs-3 fa fa-bars">
+            <p>分类</p>
+        </a>
+        <a href="./cart.html" class="mui-col-xs-3 fa fa-shopping-cart active">
+            <p>购物车</p>
+        </a>
+        <a href="./user.html" class="mui-col-xs-3 fa fa-user">
+            <p>会员中心</p>
+        </a>
+    </div>
+</footer>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/cart.js"></script>
+<script id="cartTem" type="text/html">
+    {{each data as value i}}
+    <li class="mui-table-view-cell mui-transitioning">
+        <div class="mui-slider-right mui-disabled">
+
+            <a class="mui-btn mui-btn-blue btn-delete"  style="transform: translate(-90px, 0px);" data-price="{{value.price}}" data-num="{{value.num}}" data-id="{{value.id}}">删除</a>
+            <a class="mui-btn mui-btn-red btn-update" style="transform: translate(-180px, 0px);" data-id="{{value.id}}" data-num="{{value.num}}" data-size="{{value.size}}" data-productsize="{{value.productSize}}" data-productnum="{{value.productNum}}" data-price="{{value.price}}">编缉</a>
+        </div>
+        <div class="mui-slider-handle mui-navigate-right" style="transform: translate(0px, 0px);">
+            <div class="mui-table-cell">
+                <a href="javascript:;" class="">
+                    <img class="mui-media-object mui-pull-left" src="./images/{{value.pic[0].picAddr}}">
+                    <div class="mui-media-body">
+                        <h3>{{value.proName}}</h3>
+                        <!--<p class="mui-ellipsis">-->
+                        <div class="box mui-clearfix">
+                            <div class="price">
+                                <i>￥{{value.price}}</i> <del>￥{{value.oldPrice}}</del>
+                            </div>
+                            <div class="num">x<i>{{value.num}}</i>双</div>
+                        </div>
+
+                        <div class="size">鞋码: <i>{{value.size}}</i></div>
+                        <input type="checkbox" data-price="{{value.price}}" data-num="{{value.num}}" checked/>
+                        <!--</p>-->
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script id='getsize' type="text/html">
+        尺码：
+        {{each rows as value i}}
+        {{if value==nowsize}}
+        <span class="active">{{value}}</span>
+        {{else}}
+        <span>{{value}}</span>
+        {{/if}}
+        {{/each}}
+        <div class="num">
+            数量：<span class="btn-left" data-type="left">-</span>
+            <input type="text" value="{{num}}"/>
+            <span class="btn-right" data-type="right">+</span>
+        </div>
+        剩余 <i>{{productNum}}</i>件
+</script>
+</body>
+</html>

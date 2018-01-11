@@ -1,0 +1,140 @@
+@import "./base.less";
+#header {
+  height: 45px;
+  width: 100%;
+  //text-align:center;
+  //text-align:center;
+  background-color: @main-color;
+  position: fixed;
+  z-index: 999;
+      .fa-arrow-left {
+        float:left;
+        width: 45px;
+        line-height: 45px;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        color:#fff;
+      }
+      >form {
+        margin-left: 45px;
+        margin-right: 45px;
+        margin-top: 6px;
+        width: auto;
+        >input {
+          width:100%;
+          //float:left;
+          //margin-left: 45px;
+          background-color: #fff;
+          margin-bottom: 0;
+          //
+        }
+      }
+
+      .fa-search {
+        float:right;
+        width: 45px;
+        line-height: 45px;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        color:#fff;
+        position: absolute;
+        right:1px;
+        top:1px;
+      }
+}
+#main {
+  padding-top: 45px;
+  padding-bottom: 57px;
+  background-color: #ccc;
+  height: 100%;
+  //color: @main-color;
+  .cateleft {
+    float:left;
+      >ul {
+        list-style:none;
+        >li {
+          height: 45px;
+          width: 80px;
+            >a {
+              display:block;
+              text-align: center;
+              line-height: 45px;
+              background-color: #fff;
+              color:#000;
+            }
+          &.active {
+              >a {
+                background-color: #ccc;
+                //color:#fff;
+              }
+          }
+          &+li {
+            border-top: 1px solid #ccc;
+          }
+        }
+      }
+  }
+  .cateright {
+    //padding: 10px 0px 0 0px;
+    position: relative;
+    margin-left: 90px;
+    margin-right: 10px;
+    //overflow: hidden;
+    height: 100%;
+    top:10px;
+    //left:90px;
+    //right:10px;
+    //padding-right: 10px;
+    width: auto;
+      .mui-scroll {
+        background-color: #ccc;
+        height: 101%;
+        .mui-row {
+          //height: 101%;
+          overflow: hidden;
+          list-style:none;
+          //background-color: #ccc;
+          width: 100%;
+          background-color: #fff;
+          >li{
+
+            >a {
+              dislplay:block;
+              text-align: center;
+              >img{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+  }
+}
+#footer {
+  height: 55px;
+  width: 100%;
+  position:fixed;
+  background-color: @main-color;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  a{
+    display:block;
+    float:left;
+    text-align: center;
+    padding-top: 12px;
+    color:#fff;
+    >p {
+      margin-top: 4px;
+      color:#fff;
+    }
+    &.active {
+      color:orange;
+      >p {
+        color:orange;
+      }
+    }
+  }
+}

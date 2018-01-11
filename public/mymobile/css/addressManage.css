@@ -1,0 +1,76 @@
+#header {
+    height: 45px;
+    width: 100%;
+    background-color: #006699;
+    position: fixed;
+    z-index: 999;
+}
+#header .fa-arrow-left {
+    float: left;
+    width: 45px;
+    line-height: 45px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+#header > p {
+    margin-left: 45px;
+    width: auto;
+    text-align: center;
+    line-height: 45px;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 20px;
+    /*padding-left: 0;*/
+}
+#main {
+    background-color: #fff;
+    padding: 10px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    height: 100%;
+    background-color: #fff;
+}
+#main > a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+    background-color: #fff;
+}
+#footer {
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    background-color: #006699;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+}
+#footer a {
+    display: block;
+    float: left;
+    text-align: center;
+    padding-top: 12px;
+    color: #fff;
+}
+#footer a > p {
+    margin-top: 4px;
+    color: #fff;
+}
+#footer a.active {
+    color: orange;
+}
+#footer a.active > p {
+    color: orange;
+}
+#toastBtn {
+    position: fixed;
+    bottom: 56px;
+    left: 50%;
+    display: none;
+    transform: translatex(-50%);
+}

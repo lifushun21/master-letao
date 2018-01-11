@@ -1,0 +1,126 @@
+@import "./base.less";
+#header {
+  height: 45px;
+  width: 100%;
+  //text-align:center;
+  //text-align:center;
+  background-color: @main-color;
+  position: fixed;
+  z-index: 999;
+  .fa-arrow-left {
+    float:left;
+    width: 45px;
+    line-height: 45px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color:#fff;
+  }
+  >p {
+    margin-left: 45px;
+    //margin-right: 45px;
+    //margin-top: 6px;
+    width: auto;
+    //text-align: center;
+    padding-left: 110px;
+    line-height: 45px;
+    //margin: 0;
+    margin-bottom: 0;
+    color:#fff;
+    font-size: 20px;
+  }
+}
+
+#main {
+  padding:0 10px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  .searchbox {
+    height: 30px;
+    >form {
+      margin-right: 60px;
+      height: 100%;
+      width:auto;
+        >input{
+          width: 100%;
+          height: 100%;
+          margin-bottom: 0;
+          padding: 0;
+          border:1px solid @main-color;
+          border-radius:5px 0 0 5px;
+        }
+    }
+    >a {
+      display:block;
+      width: 60px;
+      height: 30px;
+      float:right;
+      //border:1px solid @main-color;
+      background-color: @main-color;
+      border-radius:0 5px 5px 0;
+      text-align: center;
+      line-height: 30px;
+      color:#fff;
+    }
+  }
+  .searchope {
+    padding: 10px 0;
+    font-size: 14px;
+    color:#666;
+    .word {
+      float:left;
+    }
+    .right {
+      float:right;
+    }
+  }
+  .searchList {
+    border:1px solid #ccc;
+      >a {
+        display:block;
+        height: 30px;
+        width: 100%;
+        line-height: 30px;
+        padding: 0 10px;
+        font-size: 12px;
+          >span {
+            float:left;
+          }
+          > i {
+            float:right;
+            margin-top: 8px;
+          }
+          &+a {
+            border-top: 1px solid #ccc;
+          }
+      }
+
+  }
+}
+
+#footer {
+  height: 55px;
+  width: 100%;
+  position:fixed;
+  background-color: @main-color;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  a{
+    display:block;
+    float:left;
+    text-align: center;
+    padding-top: 12px;
+    color:#fff;
+    >p {
+      margin-top: 4px;
+      color:#fff;
+    }
+    &.active {
+      color:orange;
+      >p {
+        color:orange;
+      }
+    }
+  }
+}

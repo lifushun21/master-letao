@@ -1,0 +1,143 @@
+@import "base.less";
+
+#header {
+  height: 45px;
+  width: 100%;
+  text-align:center;
+  text-align:center;
+  background-color: @main-color;
+  position: fixed;
+  z-index: 999;
+    >span {
+      font-size: 16px;
+      //display:block;
+      line-height: 45px;
+      color:#fff;
+      //width: 100%;
+    }
+  >a {
+    float:right;
+    margin-right: 10px;
+    margin-top: 10px;
+    color:#fff;
+    font-size: 20px;
+  }
+}
+#main {
+  background-color: #fff;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  height: 100%;
+  .box{
+    .nav {
+      padding: 10px;
+      .mui-row {
+        >a {
+          display:block;
+          >img {
+            width: 100%;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .adv {
+      padding:0 10px;
+      border-top:1px solid #ccc;
+      .mui-row{
+        .left {
+          >img {
+            width: 100%;
+          }
+        }
+        .right {
+          >img{
+            width: 100%;
+            height: 245px;
+          }
+        }
+      }
+    }
+    .brand{
+      padding:0 10px;
+      >img {
+        width: 100%;
+      }
+      .mui-row {
+        >a {
+          >img{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .sport,.man,.woman {
+      padding: 0 10px;
+      >img {
+        width: 100%;
+      }
+      .mui-row {
+        >div {
+          padding: 5px;
+          text-align: center;
+            >a {
+              display:block;
+              border: 1px solid #ccc;
+              padding-bottom: 10px;
+              >img {
+                width: 100%;
+              }
+              >p{
+                font-size: 14px;
+                line-height: 16px;
+                width: 100%;
+                height: 32px;
+                overflow: hidden;
+              }
+              >span{
+                font-size: 12px;
+                color:red;
+              }
+              >del{
+                font-size: 12px;
+                color:red;
+              }
+              .mui-btn-primary {
+                background-color: @main-color;
+                //display: block;
+                width: 82px;
+                color:#fff;
+              }
+            }
+        }
+      }
+    }
+  }
+
+}
+#footer {
+  height: 55px;
+  width: 100%;
+  position:fixed;
+  background-color: @main-color;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+    a{
+    display:block;
+      float:left;
+      text-align: center;
+      padding-top: 12px;
+      color:#fff;
+      >p {
+        margin-top: 4px;
+        color:#fff;
+      }
+      &.active {
+        color:orange;
+        >p {
+          color:orange;
+        }
+      }
+    }
+}

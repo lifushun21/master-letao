@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>我的移动网站</title>
+    <link rel="shortcut icon" href="./images/favicon.ico"/>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet/less" href="./less/product.less"/>
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+<header id="header">
+    <a href="searchList.html" class="fa fa-arrow-left"></a>
+    <div class="head-word">商品详情</div>
+    <a href="./index.html" class="fa fa-home"></a>
+</header>
+<main id="main" class="mui-scroll-wrapper">
+    <div class="box mui-scroll">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="./images/banner6.png" />
+                    </a>
+                </div>
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="./images/banner1.png" />
+                    </a>
+                </div>
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="./images/banner4.png" />
+                    </a>
+                </div>
+                <div class="mui-slider-item">
+                    <a href="#"><img src="./images/banner5.png" />
+                    </a>
+                </div>
+                <div class="mui-slider-item">
+                    <a href="#"><img src="./images/banner6.png" />
+                    </a>
+                </div>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#"><img src="./images/banner1.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+        </div>
+        <div class="product-title">
+            李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋
+        </div>
+        <div class="price">
+            价格：<i>￥499.1</i> <del>888.1</del>
+        </div>
+        <div class="size">
+            尺码：
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+            <span>35</span>
+        </div>
+        <div class="num">
+            数量：<span>-</span><input type="text"/><span>+</span>
+            剩余 <i>20</i>件
+        </div>
+    </div>
+
+</main>
+<button id="toastBtn" type="button" class="mui-btn mui-btn-blue mui-btn-outlined">自动消失提示框</button>
+<button id="confirmBtn" type="button" class="mui-btn mui-btn-blue mui-btn-outlined">确认消息框</button>
+<footer id="footer">
+    <div class="mui-row">
+        <a href="javascript:" class="mui-col-xs-2 fa fa-shopping-cart">
+        </a>
+        <a href="javascript:" class="mui-col-xs-5 ">
+            <button class="mui-btn mui-btn-warning  btn-cart" data-type="cart">加入购物车</button>
+        </a>
+        <a href="javascript:" class="mui-col-xs-5">
+            <button  class="mui-btn mui-btn-danger btn-buy" data-type="buy">立即购买</button>
+        </a>
+    </div>
+</footer>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/product.js"></script>
+<script id="producttem" type="text/html">
+    <div class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+            <!--<div class="mui-slider-item mui-slider-item-duplicate">-->
+                <!--<a href="#">-->
+                    <!--<img src="./images/ " />-->
+                <!--</a>-->
+            <!--</div>-->
+            {{each pic as value i}}
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="./images/{{value.picAddr}}" />
+                </a>
+            </div>
+            {{/each}}
+            <!--<div class="mui-slider-item mui-slider-item-duplicate">-->
+                <!--<a href="#"><img src="./images/ " />-->
+                <!--</a>-->
+            <!--</div>-->
+        </div>
+        <div class="mui-slider-indicator">
+            <!--<div class="mui-indicator mui-active"></div>-->
+            {{each pic as value i}}
+            <div class="mui-indicator"></div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="product-title">
+        {{proName}}
+    </div>
+    <div class="price">
+        价格：<i>￥{{price}}</i> <del>￥{{oldPrice
+        }}</del>
+    </div>
+    <div class="size">
+        尺码：
+        {{each size as value i}}
+        <span>{{value}}</span>
+        {{/each}}
+    </div>
+    <div class="num">
+        数量：<span class="btn-left" data-type="left">-</span><input type="text" value="0"/><span class="btn-right" data-type="right">+</span>
+        剩余 <i>{{num}}</i>件
+    </div>
+</script>
+</body>
+</html>

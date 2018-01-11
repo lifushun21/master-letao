@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width"/>
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="./lib/mui/css/mui.picker.css"/>
+    <link rel="stylesheet" type="text/css" href="./lib/mui/css/mui.css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        body,html {
+            height: 100%;
+        }
+       #main {
+           background-color: #fff;
+           padding: 10px;
+           padding-top: 55px;
+           padding-bottom: 55px;
+           height: 100%;
+           background-color: #fff;
+       }
+        p {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px 0;
+            margin: 20px 0 0 0;
+            color: black;
+        }
+    </style>
+    <script src="./lib/jQuery/jquery.min.js"></script>
+</head>
+<body>
+ <main id="main">
+     <div class="addresslarge">
+         <input type="text" readonly  placeholder="省市区">
+     </div>
+ </main>
+</body>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/mui/js/mui.picker.min.js"></script>
+<script src="./js/city.js"></script>
+<script>
+    //选择省市区
+    var pickerCity = new mui.PopPicker({layer: 3});
+    //console.log(cityData)
+    pickerCity.setData(cityData);
+    $('#main .addresslarge').on('click', function () {
+
+        setTimeout(function () {
+            pickerCity.show(function(items){
+                console.log(items)
+                if(items[0].text==items[1].text) {
+                    items[0].text='';
+                }
+                $('#main .addresslarge>input').val(items[0].text+items[1].text+items[1].text);
+                //pickerCity.dispose();
+                //return false;
+            })
+        },200)
+
+    });
+</script>
+</html>

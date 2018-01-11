@@ -1,0 +1,162 @@
+@import "base.less";
+#header {
+  height: 45px;
+  width: 100%;
+  //text-align:center;
+  //text-align:center;
+  background-color: @main-color;
+  position: fixed;
+  z-index: 999;
+  .fa-arrow-left {
+    float:left;
+    width: 45px;
+    line-height: 45px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color:#fff;
+  }
+  .head-word {
+    margin-left: 45px;
+    margin-right: 45px;
+    //margin-top: 6px;
+    width: auto;
+    text-align: center;
+    color:#fff;
+    line-height: 45px;
+    //>input {
+    //  width:100%;
+    //  //float:left;
+    //  //margin-left: 45px;
+    //  background-color: #fff;
+    //  margin-bottom: 0;
+    //  //
+    //}
+  }
+
+  .fa-home {
+    float:right;
+    width: 45px;
+    line-height: 45px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color:#fff;
+    position: absolute;
+    right:1px;
+    top:1px;
+  }
+}
+
+#main {
+  background-color: #fff;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  height: 100%;
+    .box {
+      //height: 101%;
+      position: relative;
+      .product-title {
+        font-size: 18px;
+        line-height: 22px;
+        height: 44px;
+        padding: 0 10px;
+        overflow: hidden;
+      }
+      .price {
+        margin-top: 10px;
+        line-height: 50px;
+        padding: 0 10px;
+        border-top: 1px solid #ccc;
+        >i{
+          font-size: 20px;
+          color:#ff0000;
+        }
+        >del {
+          color:#ccc;
+          font-size: 16px;
+        }
+      }
+      .size {
+        padding: 10px 10px;
+        border-top: 1px solid #ccc;
+        line-height: 32px;
+        >span {
+          display:inline-block;
+          width: 28px;
+          height: 28px;
+          border: 1px solid #ccc;
+          line-height: 28px;
+          text-align: center;
+            &.active {
+              background-color: orange;
+            }
+        }
+
+      }
+      .num {
+        margin-top: 10px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        //line-height: 40px;
+        padding: 10px;
+        >span {
+          width: 30px;
+          height: 30px;
+          border: 1px solid #ccc;
+          display:inline-block;
+          line-height: 30px;
+          text-align: center;
+          font-size: 20px;
+        }
+        >input {
+          min-width: 30px;
+          max-width: 80px;
+          height: 30px;
+          margin: 0;
+          padding: 0;
+          vertical-align: bottom;
+          text-align: center;
+          //display:inline-block;
+        }
+      }
+    }
+
+}
+
+#footer {
+  height: 55px;
+  width: 100%;
+  position:fixed;
+  background-color: @main-color;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  padding: 5px 10px;
+    a {
+    padding: 0 2px;
+    //display: block;
+    //line-height: 45px;
+    &.fa-shopping-cart {
+      color:#000;
+      line-height: 45px;
+      text-align: center;
+      font-size: 20px;
+    }
+    .mui-btn {
+      height: 45px;
+      display:block;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+}
+
+#toastBtn {
+  position: fixed;
+  bottom:56px;
+  left:50%;
+  transform:translateX(-50%);
+  //z-index: 995;
+}

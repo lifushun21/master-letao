@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>乐淘分类页面</title>
+    <link rel="shortcut icon" href="./images/favicon.ico"/>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet/less" href="./less/category.less"/>
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <a href="#" class="fa fa-arrow-left"></a>
+    <form action="">
+        <input type="search"/>
+    </form>
+    <a href="./search.html" class="fa fa-search"></a>
+</header>
+<main id="main">
+    <div class="cateleft">
+        <ul>
+            <li class="active"><a href="#">运动馆</a></li>
+            <!--<li><a href="#">女士馆</a></li>-->
+            <!--<li><a href="#">男士馆</a></li>-->
+            <!--<li><a href="#">帆布馆</a></li>-->
+            <!--<li><a href="#">户外馆</a></li>-->
+        </ul>
+    </div>
+    <div class="cateright mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="mui-row">
+                <li class="mui-col-xs-4">
+                    <a href="#">
+                        <img src="./images/brand1.png" alt=""/>
+                        <p>耐克</p>
+                    </a>
+                </li>
+                <li class="mui-col-xs-4">
+                    <a href="#">
+                        <img src="./images/brand2.png" alt=""/>
+
+                        <p>阿迪</p>
+                    </a>
+                </li>
+                <li class="mui-col-xs-4">
+                    <a href="#">
+                        <img src="./images/brand3.png" alt=""/>
+
+                        <p>新百伦</p>
+                    </a>
+                </li>
+                <li class="mui-col-xs-4">
+                    <a href="#">
+                        <img src="./images/brand4.png" alt=""/>
+
+                        <p>哥伦比亚</p>
+                    </a>
+                </li>
+                <li  class="mui-col-xs-4">
+                    <a href="#">
+                        <img src="./images/brand5.png" alt=""/>
+
+                        <p>匡威</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer id="footer">
+    <div class="mui-row">
+        <a href="./index.html" class="mui-col-xs-3 fa fa-home">
+            <p>首页</p>
+        </a>
+        <a href="category.html" class="mui-col-xs-3 fa fa-bars active">
+            <p>分类</p>
+        </a>
+        <a href="./cart.html" class="mui-col-xs-3 fa fa-shopping-cart">
+            <p>购物车</p>
+        </a>
+        <a href="./user.html" class="mui-col-xs-3 fa fa-user">
+            <p>会员中心</p>
+        </a>
+    </div>
+</footer>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/cate.js"></script>
+<script id="catelefttem" type="text/html">
+    {{each rows as value i}}
+    <li><a href="#" data-id="{{value.id}}">{{value.categoryName}}</a></li>
+    {{/each}}
+</script>
+<script id="caterighttem" type="text/html">
+    {{each rows as value i}}
+    <li class="mui-col-xs-4">
+        <a href="#">
+            <img src="../{{value.brandLogo}} " alt=""/>
+            <p>{{value.brandName}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+</body>
+</html>

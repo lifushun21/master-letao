@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="shortcut icon" href="./images/favicon.ico"/>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet/less" href="./less/search.less"/>
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+   <header id="header">
+    <a href="./category.html" class="fa fa-arrow-left"></a>
+    <p>搜索中心</p>
+   </header>
+   <main id="main">
+       <div class="searchbox">
+           <a href="javascript:">搜索</a>
+           <form action="#">
+               <input type="search"/>
+           </form>
+       </div>
+       <div class="searchope mui-clearfix">
+           <div class="word">搜索历史</div>
+           <div class="right">
+               <i class="fa fa-trash-o"></i>
+               <span>清空记录</span>
+           </div>
+       </div>
+       <div class="searchList">
+           <!--<a href="#" class="mui-clearfix">-->
+                <!--<span>鞋</span>-->
+                <!--<i class="fa fa-times"></i>-->
+          <!--</a>-->
+           <!--<a href="#" class="mui-clearfix">-->
+               <!--<span>鞋</span>-->
+               <!--<i class="fa fa-times"></i>-->
+           <!--</a>-->
+       </div>
+   </main>
+   <footer id="footer">
+       <div class="mui-row">
+           <a href="./index.html" class="mui-col-xs-3 fa fa-home">
+               <p>首页</p>
+           </a>
+           <a href="./category.html" class="mui-col-xs-3 fa fa-bars active">
+               <p>分类</p>
+           </a>
+           <a href="./cart.html" class="mui-col-xs-3 fa fa-shopping-cart">
+               <p>购物车</p>
+           </a>
+           <a href="./user.html" class="mui-col-xs-3 fa fa-user">
+               <p>会员中心</p>
+           </a>
+       </div>
+   </footer>
+   <script src="./lib/zepto/zepto.min.js"></script>
+   <script src="./lib/mui/js/mui.min.js"></script>
+   <script src="./lib/artTemplate/template.js"></script>
+   <script src="./js/search.js"></script>
+   <script id='historydatatem' type="text/html">
+        {{each rows as value i}}
+        <a href="#" class="mui-clearfix btn-search" data-search="{{value}}">
+            <span>{{value}}</span>
+            <i class="fa fa-times deleteHis"></i>
+        </a>
+       {{/each}}
+   </script>
+</body>
+</html>
